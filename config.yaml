@@ -127,7 +127,7 @@ params:
     title: "Киреев Илья"
     subtitle: "Программист встраиваемых систем"
     content: "10+ лет опыта разработки в embedded на языке C"
-    image: /images/hero.svg
+    image: "/images/me.jpg"
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -151,7 +151,7 @@ params:
   about:
     enable: true
     title: "Обо мне"
-    image: "/images/me.png"
+    # image: "/images/me.png"
     content: |-
       Разрабатываю ПО встраиваемых систем с 2013 года. В настоящее время разрабатываю ПО для электронных устройств с микроконтроллерами (STM32, ESP32, в прошлом AVR) на языке С (в некоторых проектах С++), с применением современных библиотек и RTOS (например FreeRTOS, ChibiOS).
       Имею навыки работы со всей периферией микроконтроллеров, такой как: UART, CAN, SPI, I2C, USB, DMA, ADC, DAC и т.д., различными интерфейсами (например RS-232, RS-485, CAN) и протоколами (например Modbus, MQTT, и различными отраслевыми протоколами).
