@@ -1,0 +1,495 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "ru-RU"
+title: "Киреев Илья"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus:
+#   main:
+#     - identifier: blog
+#       name: Blog
+#       title: Blog posts
+#       url: /blogs
+#       weight: 1
+#     - identifier: gallery
+#       name: Gallery
+#       title: Blog posts
+#       url: /gallery
+#       weight: 2
+#     # Dropdown menu
+#     - identifier: dropdown
+#       title: Example dropdown menu
+#       name: Dropdown
+#       weight: 3
+#     - identifier: dropdown1
+#       title: example dropdown 1
+#       name: example 1
+#       url: /#
+#       parent: dropdown
+#       weight: 1
+#     - identifier: dropdown2
+#       title: example dropdown 2
+#       name: example 2
+#       url: /#
+#       parent: dropdown
+#       weight: 2
+
+params:
+  title: "Киреев Илья"
+  description: Личный сайт embedded разработчика
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: " " # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    # intro: "Привет! Меня зовут"
+    title: "Киреев Илья"
+    subtitle: "Программист встраиваемых систем"
+    content: "10+ лет опыта разработки в embedded на языке C"
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Резюме hh.ru"
+      url: "https://hh.ru/resume/df14ab78ff0949fc3c0039ed1f7766686b3039"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/embedcat
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/ilya-kireev-56017a234/
+      # customIcons:
+      #   - icon: /images/hh_mono.svg
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "Обо мне"
+    image: "/images/me.png"
+    content: |-
+      Разрабатываю ПО встраиваемых систем с 2013 года. В настоящее время разрабатываю ПО для электронных устройств с микроконтроллерами (STM32, ESP32, в прошлом AVR) на языке С (в некоторых проектах С++), с применением современных библиотек и RTOS (например FreeRTOS, ChibiOS).
+      Имею навыки работы со всей периферией микроконтроллеров, такой как: UART, CAN, SPI, I2C, USB, DMA, ADC, DAC и т.д., различными интерфейсами (например RS-232, RS-485, CAN) и протоколами (например Modbus, MQTT, и различными отраслевыми протоколами).
+      В работе использую системы сборки (make, cmake), компиляторы (GCC), отладочные средства (gdb, openOCD), системы контроля версий (Git, SVN), контейнеры Docker, CI/CD (Drone).
+      Обладаю умением читать электрические схемы, PCB (Altium Designer, P-CAD), работаю с приборами и инструментами (осциллограф, мультиметр, блоки питания, паяльник и т.п.).
+      В целом увлекаюсь темами Embedded, IoT, Advanced C.
+      Имею навыки развёртывания и администрирования удалённых серверов (ssh, nginx, docker).
+      Использую Python для решения задач автоматизации и разработки утилит.
+      В данный момент руковожу небольшой группой разработчиков: определение и выдача заданий, контроль выполнения, code review, merge RP.
+      Есть опыт разработки для Android (Java).
+
+    skills:
+      enable: true
+      # title: "Мои навыки и технологии"
+      items:
+        - "C (advanced)"
+        - "Микроконтроллеры"
+        - "STM32"
+        - "ESP32"
+        - "Git / SVN"
+        - "Python"
+        - "FreeRTOS"
+        - "ChibiOS"
+        - "Linux"
+        - "Docker"
+
+
+  # Experience
+  experience:
+    enable: true
+    title: "Опыт работы"
+    items:
+      - job: "Ведущий программист"
+        company: "Кит Инвест"
+        companyUrl: "https://kitvending.ru/"
+        date: "Март 2021 - по настоящее время"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          name: "kitvending.ru"
+          url: "https://kitvending.ru/"
+        content: |
+          - Разработка программного обеспечения электронных устройств (архитектура ARM, язык C, STM32, ESP32)
+          - Поддержка, сопровождение и модернизация существующего ПО
+          - Руководство группой программистов (выдача задания, code review)
+          - Разработка ПО (Python, C++, Django)
+          
+          Технологии: FreeRTOS, ChibiOS, STM32, ESP32, make, GCC, CI, git, docker.
+
+      - job: "Инженер-программист"
+        company: "Электронные системы"
+        companyUrl: "https://azs.ru"
+        date: "Август 2013 - Февраль 2021"
+        featuredLink:
+          enable: true
+          name: "azs.ru"
+          url: "https://azs.ru"
+        info:
+          enable: false
+          content: I worked as a software developer for more than one year in Amazon.
+        content: |
+          - Разработка программного обеспечения электронных устройств (архитектура ARM, AVR, язык C/C++, AVR, STM32);
+          - Поддержка, сопровождение и модернизация существующего ПО;
+          - Разработка утилит и вспомогательного ПО для ПК (Python, C++);
+          - Разработка электрических схем устройств
+          - Написание технической документации по выпускаемым продуктам
+
+      - job: "Инженер-конструктор"
+        company: "Калужский турбинный завод"
+        companyUrl: "https://paoktz.ru/"
+        date: "Май 2013 - Август 2013"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          - Техническое руководство по электрической части в период монтажа, наладки и испытаний изделий;
+          - Участие в испытаниях и отработке опытных и серийных изделий, а также узлов и элементов паротурбинных установок;
+          - Разработка и корректировка рабочих схем электрооборудования стендов, разработка обезличенных нарядов, инструкций, отчётов и другой конструкторской документации;
+          - Участие в сопровождении производства при изготовлении узлов и испытательных стендов;
+          - Участие в работах по совершенствованию и модернизации изделий, их элементов и испытательных стендов;
+          - Обеспечение контроля за эффективной эксплуатацией, техническим обслуживанием и своевременным ремонтом электрооборудования.
+
+      - job: "Инженер-конструктор"
+        company: "Брянское специальное конструкторское бюро"
+        companyUrl: "https://example.com"
+        date: "June 2017 - Nov 2019"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          - Разработка, корректировка КД радиоэлектронной продукции;
+          - Регулировка и ремонт изделий;
+          - Макетирование опытных образцов;
+          - Проведение механических и климатических испытаний (приемо-сдаточные, периодические испытания и др.);
+          - Сопровождение производства изделий;
+          - Ведущий инженер по выполнению ОКР (2 изделия)
+
+  # Education
+  education:
+    enable: true
+    title: "Образование"
+    index: false
+    items:
+      - title: "Высшее образование"
+        school:
+          name: "Брянский государственный технический университет"
+          url: "https://tu-bryansk.ru"
+        date: "2006 - 2011"
+        # GPA: "3.8 out of 5.0"
+        content: |
+          Диплом с отличием по специальности "Автоматизированный электропривод и автоматика промышленных установок и технологических комплексов"
+          
+          Участие в научной жизни университета, публикация научных работ и учатие в олимпиадах
+      
+      - title: "Курсы повышения квалификации"
+        school:
+          name: "Образовательная платформа stepik.org"
+          url: "https://stepik.org"
+        date: "2016"
+        content: |
+          Курс "Программирование на Python"
+        featuredLink:
+          enable: true
+          name: "Сертификат"
+          url: "https://stepik.org/cert/40593"
+      
+      - title: "Курсы повышения квалификации"
+        school:
+          name: "Образовательная платформа stepik.org"
+          url: "https://stepik.org"
+        date: "2016"
+        content: |
+          Курс "Python: основы и применение"
+        featuredLink:
+          enable: true
+          name: "Сертификат"
+          url: "https://stepik.org/cert/41617"
+      
+      - title: "Курсы повышения квалификации"
+        school:
+          name: "Образовательная платформа stepik.org"
+          url: "https://stepik.org"
+        date: "2017"
+        content: |
+          Курс "Алгоритмы: теория и практика. Методы"
+        featuredLink:
+          enable: true
+          name: "Сертификат"
+          url: "https://stepik.org/cert/39587"
+      
+      - title: "Курсы повышения квалификации"
+        school:
+          name: "Образовательная платформа stepik.org"
+          url: "https://stepik.org"
+        date: "2020"
+        content: |
+          Курс "Django с нуля на практике"
+        featuredLink:
+          enable: true
+          name: "Сертификат"
+          url: "https://stepik.org/cert/796191"
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    title: "Реализованные проекты"
+    items:
+
+      - title: Эквайринговый терминал KitPosLite
+        content: |
+          Эквайринговый терминал для сферы вендинга.
+          Предназначен для считывания банковских карт или мобильных телефонов.
+          После обработки данных карты запрос на проведение транзакции отправляется в зашифрованном виде в процессинговый центр, где и принимается решение о проведении операции по карте.
+          Работа со считывателями карт st25, GSM-модем, LCD-экран, приём и обработка данных по протоколам.
+          Серийное произодство - в работе более 5000 устройств.
+        image: /images/projects/KitPosLite.jpg
+        featured:
+          name: Страница устройства
+          link: https://vending.kit-invest.ru/KitPosLite
+        badges:
+          - "ESP32"
+          - "C"
+          - "FreeRTOS"
+
+      - title: Телеметрический контроллер KitBoxMaster
+        content: |
+          Телеметрический контроллер для вендинговых аппаратов.
+          Предназначен для считывания состояния торгового автомата, управления наличными и безналичными средствами оплаты. 
+          В процессе работы происходит сбор, обработка и отправка телеметрической информации на сервер мониторинга. 
+          Работа с MDB-шиной (UART), GSM-модем, LCD-экран, обработка данных по протоколам, работа с энергонезависимой памятью.
+          Серийное произодство - в работе более 25000 устройств.
+        image: /images/projects/KitBoxMaster.jpg
+        featured:
+          name: Страница устройства
+          link: https://vending.kit-invest.ru/KitBoxMaster
+        badges:
+          - "STM32"
+          - "C"
+          - "ChibiOS"
+        # links:
+        #   - icon: fab fa-github
+        #     url: https://github.com/gurusabarish/converter
+
+      - title: Отсчётное устройство ТРК Гранит-500
+        content: |
+          Блок управления топливораздаточной колонкой.
+          Предназначен для управление процессом налива топлива на АЗС по команде управляющей системы.
+          Модульная система, состоящая из одного или нескольких блоков, связанных по шине CAN.
+          Работа с датчиками, LCD-экраном, связь с управляющей системой по RS-485, управление исполнительными устройствами.
+          Выпущено около 1000 изделий.
+        image: /images/projects/granit500.png
+        featured:
+          name: Страница устройства
+          link: https://www.azs.ru/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%8B/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/indicating/granit500.html
+        badges:
+          - "STM32"
+          - "C++"
+          - "FreeRTOS"
+          - "CAN"
+          - "RS-485"
+
+      - title: Система управления ГТД
+        content: |
+          Система управление газотурбинными двигателем.
+          Предназначена для управления запуском газотурбинного двигателя, поддержания заданного качества управления параметрами работы двигателя.
+          Система состоит из нескольких блоков связанных по шине CAN.
+          Работа с большим числом различных датчиков, управление большим числом исполнительных механизмов, формирование телеметрии и отправка её на систему верхнего уровня.
+          Изготовлена и введена в работу опытная партия.
+        image: /images/projects/gtd.png
+        # featured:
+        #   name: Demo V2
+        #   link: https://hugo-profile-2.netlify.app
+        badges:
+          - "STM32"
+          - "C"
+          - "FreeRTOS"
+          - "CAN"
+        # links:
+        #   - icon: fab fa-github
+        #     url: https://github.com/gurusabarish/HugoProfileV2
+
+      - title: Сервис для организаторов соревнований
+        content: |
+          Сервис для автоматизации проведения спортивных соревнований (Django, Postgres).
+          Развернуто на виртуальном сервере, интеграция с системой приёма платажей yoomoney.
+        image: /images/projects/rockevents.png
+        featured:
+          name: rockevents.ru
+          link: https://rockevents.ru
+        badges:
+          - "Python"
+          - "Django"
+          - "PostgreSQL"
+          - "Docker"
+
+  #Contact
+  contact:
+    enable: true
+    title: "Связаться со мной"
+    # content: 
+    email: zzerocks@gmail.com
+    btnName: Написать e-mail
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: "https://github.com/embedcat"
+      linkedin: "https://www.linkedin.com/in/ilya-kireev-56017a234/"
+      headhunter: "https://hh.ru/resume/df14ab78ff0949fc3c0039ed1f7766686b3039"
+      # twitter: https://twitter.com
+      # instagram: https://instagram.com
+      # facebook: https://facebook.com
+    # brandLogo:
+    #   enable: true
+    # themeCopyright:
+    #   enable: true
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
